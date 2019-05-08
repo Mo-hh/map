@@ -4,7 +4,7 @@ const shopModel =require('../models/shopModel');
 
 
 
-shopsRouter.get('/getByDistance', async (req, res, next) => {
+shopsRouter.post('/getByDistance', async (req, res, next) => {
 
   try {
     const allRestaurantsNear = await shopModel.aggregate([{
@@ -12,9 +12,9 @@ shopsRouter.get('/getByDistance', async (req, res, next) => {
         near: {type: 'Point', coordinates: [parseFloat(req.body.longitude), parseFloat(req.body.latitude)]},
         maxDistance: req.body.radius * 1000,
         spherical: true,
-        distanceField: "dist.calculated" // calcuklate between  2 points//
+        distanceField: "dist.calculated" // calculate between  2 points//
       }
-    }, {$project: {_id: 0, name: 1, cheapestDish: 1, "dist.calculated": 1}}])
+    }, {$project: {_id: 0}}])
 
     res.status(200).json(allRestaurantsNear);
   }catch (error) {

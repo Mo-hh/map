@@ -22,7 +22,7 @@ const createRandomShops = () => {
  const fakeshop =
  {  name:faker.company.companyName(),
     cheapesDish:faker.commerce.price(),
-    location:{type:'point',coordinates:[faker.address.longitude(),faker.address.latitude()]}
+    location:{type:'Point',coordinates:[parseFloat(faker.address.longitude()),parseFloat(faker.address.latitude())]}
 
 
 

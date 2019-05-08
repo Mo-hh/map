@@ -14,12 +14,23 @@
   crossorigin=""></script>
 </head>
 <body>
-    <script src="scripts/map.js"  ></script>
+
     <h1>This is the starting page</h1>
     <a href="map.html">Find Restaurants near you</a>
   <div id="myMap"></div>
 
+  <form >
+    <fieldset>
+      <label>Define the Range:</label>
 
+      <input tyoe=number required  min="1" />
+      <button type ="submit">Get Restaurants inside this range</button>
+
+
+    </fieldset>
+   </form>
+
+    <script src="scripts/map.js"  ></script>
 
 
 

@@ -17,5 +17,9 @@ a {
 #myMap {
 
   width: 97vw;
-  height: 35vw;
+  height: 30vw;
+  margin-bottom: 5vw;
+}
+fieldset{
+  height: 5vw;
 }
