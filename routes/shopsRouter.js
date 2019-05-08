@@ -12,7 +12,7 @@ shopsRouter.get('/getByDistance', async (req, res, next) => {
         near: {type: 'Point', coordinates: [parseFloat(req.body.longitude), parseFloat(req.body.latitude)]},
         maxDistance: req.body.radius * 1000,
         spherical: true,
-        distanceField: "dist.calculated"
+        distanceField: "dist.calculated" // calcuklate between  2 points//
       }
     }, {$project: {_id: 0, name: 1, cheapestDish: 1, "dist.calculated": 1}}])
 

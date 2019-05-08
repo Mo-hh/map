@@ -1,12 +1,21 @@
 h1 {
-
-
-  color:white;
+  margin: 5vw 0;
   background: black;
+  color: white;
+  font-size: 4vw;
+  font-family: jokerman;
+  text-align: center;
 }
 
-a{
+a {
   text-decoration: none;
-  color: blue;
+  color: deepskyblue;
   font-size: 2.2vw;
+  font-family: jokerman;
+}
+
+#myMap {
+
+  width: 97vw;
+  height: 35vw;
 }
